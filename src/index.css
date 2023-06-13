@@ -1,66 +1,86 @@
 body {
   font-family: 'Hubballi', cursive;
-  background-color: #e1edfa;
+  background-image: url(/fondo.png);
   font-size: 1.6rem;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: top center;
+  height: 100%;
+  min-height: 100vh;
 }
+
 header {
-  background-color: #30b8f7;
+  background-color: #30b8f767;
   padding: 1.5rem;
-  border-bottom: .5rem solid #0284c7;
-  
+  border-bottom: .5rem solid #0285c77c;
 }
+
 header h1 {
   text-align: center;
   color: white;
   font-family: 'Inter', sans-serif;
   font-size: 2.5rem;
-  margin:0;
+  margin: 0;
 }
+
 .dos-columnas {
   display: grid;
-  gap: 4rem;
+  margin: 3rem 1rem;
 }
+
 @media (min-width: 768px) {
   .dos-columnas {
     grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
   }
 }
+
 main {
   margin: 4rem auto;
   max-width: 1200px;
 }
+
 .contenedor {
-  margin: 0 auto 2rem auto;
+  margin: 2rem auto 2rem auto;
   border-radius: .5rem;
-  background-color: white;
-  padding: 4rem;
-  -webkit-box-shadow: 0px 10px 33px -17px rgba(173,173,173,1);
-  -moz-box-shadow: 0px 10px 33px -17px rgba(173,173,173,1);
-  box-shadow: 0px 10px 33px -17px rgba(173,173,173,1);
+  background-color: rgba(255, 255, 255, 0.774);
+  padding: 2.5rem;
+  -webkit-box-shadow: 0px 10px 33px -17px rgba(173, 173, 173, 1);
+  -moz-box-shadow: 0px 10px 33px -17px rgba(173, 173, 173, 1);
+  box-shadow: 0px 10px 33px -17px rgba(173, 173, 173, 1);
   width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 form {
   width: 100%;
 }
+
 .campo {
   max-width: 400px;
   margin: 0 auto 1rem auto;
 }
+
 .campo label {
   display: block;
   margin-bottom: .5rem;
-
+  font-weight: 700;
 }
+
 .campo input,
 .campo select {
   all: unset;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #006ef5;
   width: 100%;
   border-radius: .5rem;
   padding: .5rem;
+  background-color: #ffffffe5;
 }
 
- input[type="submit"] {
+input[type="submit"] {
   background-color: #0098df;
   margin: 2rem auto 0 auto;
   display: block;
@@ -73,13 +93,14 @@ form {
   width: 100%;
   transition: background-color .3s ease;
 }
+
 /* @media (min-width: 768px) {
    input[type="submit"]  {
      max-width: 400px;
   }
 } */
- input[type="submit"]:hover {
-  background-color: #0362a1;
+input[type="submit"]:hover {
+  background-color: #ff9900;
 }
 
 
@@ -88,4 +109,123 @@ form {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1,
+.dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #ff9900;
+  border-radius: 100%;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg)
+  }
+}
+
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg)
+  }
+}
+
+@-webkit-keyframes sk-bounce {
+
+  0%,
+  100% {
+    -webkit-transform: scale(0.0)
+  }
+
+  50% {
+    -webkit-transform: scale(1.0)
+  }
+}
+
+@keyframes sk-bounce {
+
+  0%,
+  100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  }
+
+  50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+.clima h2{
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+.clima>p:first-of-type {
+  font-size: 3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.clima>p:first-of-type span {
+  font-size: 2rem;
+}
+
+.clima p {
+  text-align: center;
+  margin: 0;
+}
+
+.clima p span {
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+.tem-min-max {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.alerta {
+  border: 1px solid #ec0000;
+  background-color: #fc002a9d;
+  color: #ffffff;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: center;
+}
+
+.noResulatos{
+  background-color: rgba(255, 255, 255, 0.774);
+  font-family: unset;
+  font-weight: 700;
+  text-align: center;
 }
