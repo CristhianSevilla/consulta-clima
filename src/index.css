@@ -1,6 +1,6 @@
 body {
-  font-family: 'Hubballi', cursive;
-  background-image: url(/fondo.png);
+  font-family: 'Roboto', sans-serif;
+  background-image: url(/fondo.jpg);
   font-size: 1.6rem;
   background-repeat: no-repeat;
   background-size: cover !important;
@@ -10,16 +10,16 @@ body {
 }
 
 header {
-  background-color: #30b8f767;
+  background-color: #52b9e98f;
   padding: 1.5rem;
-  border-bottom: .5rem solid #0285c77c;
+  border-bottom: .4rem solid #0285c77c;
 }
 
 header h1 {
   text-align: center;
   color: white;
   font-family: 'Inter', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -41,7 +41,7 @@ main {
 }
 
 .contenedor {
-  margin: 2rem auto 2rem auto;
+  margin: 0rem auto 2rem auto;
   border-radius: .5rem;
   background-color: rgba(255, 255, 255, 0.774);
   padding: 2.5rem;
@@ -53,6 +53,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+.contenedor {
+  margin: 2rem auto 2rem auto;
+}
 }
 
 form {
@@ -67,17 +73,18 @@ form {
 .campo label {
   display: block;
   margin-bottom: .5rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .campo input,
 .campo select {
   all: unset;
-  border: 1px solid #006ef5;
+  border: 1px solid #a1a4a8;
   width: 100%;
   border-radius: .5rem;
   padding: .5rem;
   background-color: #ffffffe5;
+  font-weight: 300;
 }
 
 input[type="submit"] {
@@ -92,6 +99,7 @@ input[type="submit"] {
   border: none;
   width: 100%;
   transition: background-color .3s ease;
+  font-weight: 600;
 }
 
 /* @media (min-width: 768px) {
@@ -100,7 +108,7 @@ input[type="submit"] {
   }
 } */
 input[type="submit"]:hover {
-  background-color: #ff9900;
+  background-color: #026897;
 }
 
 
@@ -129,7 +137,7 @@ input[type="submit"]:hover {
   display: inline-block;
   position: absolute;
   top: 0;
-  background-color: #ff9900;
+  background-color: #0098df;
   border-radius: 100%;
 
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
@@ -182,8 +190,8 @@ input[type="submit"]:hover {
   }
 }
 .clima h2{
-font-size: 2rem;
-margin-bottom: 1rem;
+font-size: 1.8rem;
+margin-bottom: 2rem;
 }
 .clima>p:first-of-type {
   font-size: 3rem;
@@ -213,7 +221,7 @@ margin-bottom: 1rem;
 
 .alerta {
   border: 1px solid #ec0000;
-  background-color: #fc002a9d;
+  background-color: #fc002a83;
   color: #ffffff;
   padding: 1rem;
   text-transform: uppercase;
@@ -221,11 +229,14 @@ margin-bottom: 1rem;
   font-size: 1rem;
   text-align: center;
   vertical-align: center;
+  width: 100%;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .noResulatos{
+  font-family: 'Inter', sans-serif;
   background-color: rgba(255, 255, 255, 0.774);
-  font-family: unset;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }

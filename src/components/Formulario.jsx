@@ -12,7 +12,7 @@ const Formulario = () => {
 
         //validacion
         if (Object.values(busqueda).includes('')) {
-            setAlerta('Todos lo campos son obligatorios')
+            setAlerta('Llena Todos los Campos')
             return
         }
         setAlerta('')
